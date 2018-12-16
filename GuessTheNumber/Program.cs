@@ -20,23 +20,12 @@ namespace GuessTheNumber
 
             //check if the user guessed correctly
             while (randomNr != number)
-            {
+            {               
                 if (randomNr < number)
-                {
-                    while (randomNr < number)
-                    {
-                        Console.WriteLine("The number is too big, try again: ");
-                        number = int.Parse(Console.ReadLine());
-                    }
-                }
+                    Console.WriteLine("The number is too big, try again: ");
                 else if (randomNr > number)
-                {
-                    while (randomNr > number)
-                    {
-                        Console.WriteLine("The number is too small, try again: ");
-                        number = int.Parse(Console.ReadLine());
-                    }
-                }
+                    Console.WriteLine("The number is too small, try again: ");
+                number = int.Parse(Console.ReadLine());
             }
             if (randomNr == number)
                 Console.WriteLine(" Congrats! You guessed the number! ({0})", number);
